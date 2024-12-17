@@ -1,0 +1,20 @@
+# Ignorowanie plików Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignorowanie katalogów kompilacji
+Debug/
+Release/
+x64/
+x86/
+*.obj
+*.exe
+*.log
+
+# Ignorowanie innych niepotrzebnych plików
+Thumbs.db
+*.tmp
+Nowy Dokument tekstowy.txt

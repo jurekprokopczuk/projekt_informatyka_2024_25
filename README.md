@@ -28,3 +28,49 @@ Problemy, które wystąpiły:
 Zbyt szybki ruch statku: Początkowa prędkość była zbyt duża, co sprawiało, że statek poruszał się zbyt szybko. Problem został rozwiązany poprzez zmniejszenie wartości prędkości do speed = 0.1f.
 Błędy z granicami ruchu: Po załadowaniu obrazu i zastosowaniu skali, granice poruszania statku nie były odpowiednio obliczane, co powodowało, że statek zatrzymywał się na połowie ekranu. Zmieniono logikę granic, uwzględniając przeskalowaną szerokość statku.
 Niewidoczność statku: Początkowy obrazek statku był zbyt mały, przez co nie był dobrze widoczny w grze. Problem rozwiązano poprzez skalowanie statku do odpowiedniego rozmiaru za pomocą funkcji sprite.setScale().
+
+### **Podsumowanie dnia 3 - Dodanie wrogów, strzałów oraz podstawowej mechaniki kolizji**
+
+#### **Wykonane zadania:**
+1. **Utworzenie klasy `Enemy`:**
+   - Stworzono klasę `Enemy`, która reprezentuje wroga w grze. Każdy wróg posiada kształt (`sf::RectangleShape`), pozycję oraz metodę `update`, która umożliwia poruszanie wrogiem w odpowiednim kierunku. W tym etapie wrogowie byli reprezentowani przez prostokąty.
+
+2. **Dodanie klasy `Bullet`:**
+   - Zaimplementowano klasę `Bullet`, która reprezentuje pocisk wystrzelony przez gracza. Pocisk porusza się w górę ekranu i sprawdzana jest jego kolizja z wrogami. Po trafieniu wroga, wróg zostaje usunięty.
+
+3. **Rozmieszczenie wrogów na ekranie:**
+   - Wrogowie zostali rozmieszczeni w układzie 3 rzędów po 11 kolumn, poruszając się na razie za pomocą prostych prostokątów. Wrogowie zmieniają kierunek ruchu po dotarciu do krawędzi ekranu.
+
+4. **Implementacja mechaniki strzałów:**
+   - Dodano możliwość strzelania przez gracza po naciśnięciu spacji. Pocisk porusza się w górę ekranu i sprawdzana jest jego kolizja z wrogami.
+
+5. **Podstawowa detekcja kolizji:**
+   - Po trafieniu pocisku w wroga, wróg zostaje usunięty z ekranu, a pocisk również.
+
+#### **Problemy:**
+
+1. **Problem z poruszaniem się wrogów:**
+   - Wrogowie poruszali się, ale zdarzało się, że nie zachowywali się jak jeden obiekt, a każda kolumna odbijała się osobno, co skutkowało nachodzeniem wrogów na siebie. Dodatkowo, poruszały się za szybko.
+
+   **Rozwiązanie**:
+   - Wprowadzono mechanizm, który sprawił, że cała formacja wrogów poruszała się jako jeden obiekt, zmieniając kierunek po osiągnięciu krawędzi ekranu i obniżając całą formację wrogów po zmianie kierunku.
+
+2. **Zbyt szybki ruch wrogów:**
+   - Początkowo ruch wrogów był zbyt szybki, co utrudniało rozgrywkę.
+
+   **Rozwiązanie**:
+   - Zredukowano prędkość ruchu wrogów, aby była bardziej proporcjonalna do reszty elementów w grze i dostosowana do grywalności.
+
+
+
+#### **GitHub Update:**
+
+**Dodano:**
+- Zaimplementowano klasę `Enemy`, która obsługuje wrogów.
+- Dodano możliwość strzelania przez gracza z wykorzystaniem klasy `Bullet`.
+- Implementowano podstawową detekcję kolizji między pociskami a wrogami.
+- Dodano mechanikę poruszania się wrogów w szyku, zmieniających kierunek po dotarciu do krawędzi ekranu i obniżających się po zmianie kierunku.
+
+**Poprawki:**
+- Zoptymalizowano ruch wrogów, dostosowano go do lepszej grywalności.
+- Dodano prostą detekcję kolizji oraz system punktacji.

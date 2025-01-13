@@ -1,3 +1,4 @@
+Jerzy Prokopczuk ARiSS s199115
 ## Dziennik zdarzeń
 
 ### **Dzień 1 - Rozpoczęcie projektu:**
@@ -145,4 +146,3 @@
 - **Dźwięk strzału** (`shoot.wav`) – odtwarzany przy wystrzale gracza.
 - **Wielokrotne stany gry** zapewniają przejrzystą nawigację między ekranami (Start, Help, Playing, GameOver, YouWin, ExitConfirmation).
 
-Dzięki temu dziennikowi mamy jasny obraz rozwoju projektu – od podstawowej konfiguracji aż do obecnego stanu, w którym gra **Space Invaders** zawiera rozbudowane mechaniki rozgrywki, wielopoziomowy system wrogów, zapisywanie i wczytywanie stanu gry, tabelę najlepszych wyników, zaawansowaną obsługę kolizji oraz różnorodne ekrany, stanowiące atrakcyjną oprawę wizualną i dźwiękową.
